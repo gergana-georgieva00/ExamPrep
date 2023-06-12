@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CarShop.Data.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CarShop.Data
 {
@@ -12,6 +13,10 @@ namespace CarShop.Data
             : base(dbContextOptions)
         {
         }
+
+        public DbSet<User> Users { get; set; }
+        public DbSet<Issue> Issues { get; set; }
+        public DbSet<Car> Cars { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
