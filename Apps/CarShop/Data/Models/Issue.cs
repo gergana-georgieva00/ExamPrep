@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CarShop.Data.Models
 {
-    internal class Issue
+    public class Issue
     {
     }
 }
